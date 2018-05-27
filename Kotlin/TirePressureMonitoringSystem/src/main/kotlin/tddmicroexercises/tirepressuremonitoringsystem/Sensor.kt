@@ -5,7 +5,7 @@ import java.util.*
 // The reading of the pressure value from the sensor is simulated in this implementation.
 // Because the focus of the exercise is on the other class.
 
-class Sensor(val OFFSET: Double = 16.0) {
+class Sensor {
 
     fun popNextPressurePsiValue(): Double {
         var pressureTelemetryValue: Double
@@ -15,6 +15,9 @@ class Sensor(val OFFSET: Double = 16.0) {
     }
 
     companion object {
+
+        var OFFSET: Double = 16.0
+
         private fun samplePressure(): Double {
             // placeholder implementation that simulate a real sensor in a real tire
             val basicRandomNumbersGenerator: Random = Random()
