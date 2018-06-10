@@ -9,11 +9,11 @@ class Alarm(val LowPressureThreshold: Double = 17.0,
         val psiPressureValue: Double = this.sensor.popNextPressurePsiValue()
 
         if (psiPressureValue < LowPressureThreshold || HighPressureThreshold < psiPressureValue) {
-            alarmOn = true;
+            alarmOn = true
         }
     }
 
     fun isAlarmOn(): Boolean {
-        return alarmOn;
+        return alarmOn
     }
 }
